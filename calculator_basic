@@ -1,0 +1,51 @@
+#iclude<iostream>
+using namespace std
+
+int takeval()
+{
+cout << "enter the value of an integer";
+int val;
+cin >> val;
+return val;
+}
+
+void print(int result)
+{
+cout << "your answer is =" << result;
+}
+
+int calcu()
+{
+cout << " please select one of the operations" << " 1 for +, 2 -, 3 *, 4 /";
+
+int op;
+cin>>op;
+}
+
+int calcuops(int x, int y, int op)
+{
+if(op == 1)
+return x + y;
+if(op == 2)
+return x - y;
+if(op == 3)
+return x*y;
+if(op == 4)
+return x/y;
+
+return x + y;
+}
+
+int main()
+{
+int input1;
+input1 = takeval();
+int input2;
+input2 = takeval();
+int op = calcu();
+
+int result = calcuops(input1, input2, op);
+
+print(result);
+return 0;
+}
